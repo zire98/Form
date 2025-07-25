@@ -7,9 +7,13 @@
 
 }
 
-* {
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
@@ -33,10 +37,13 @@
 
 .right-side {
     flex: 2;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(222, 222, 222);
 }
 
 .logo-banner {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
     display: flex;
     align-items: center;
@@ -44,7 +51,7 @@
     gap: 1rem;
     padding: 1rem;
     box-sizing: border-box;
-    margin-top: 20vh;
+    margin-top: 22vh;
 }
 
 .logo-banner img {
@@ -71,4 +78,12 @@
 .left-side h4 a:focus {
     text-decoration: underline;
     outline: none;
+}
+
+.text {
+    padding: 12vh 5vw 8vh 4vw;
+    padding-right: 17%;
+    font-size: clamp(0.9rem, 2vw, 1.6rem);
+    font-weight: bold;
+    background-color: rgb(218, 218, 218);
 }
