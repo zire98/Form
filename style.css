@@ -81,7 +81,7 @@ a:focus {
 }
 
 .text {
-    padding: 13vh 5vw 8vh 4vw;
+    padding: 13vh 5vw 7vh 4vw;
     padding-right: 17%;
     font-size: clamp(0.9rem, 2vw, 1.6rem);
     font-weight: bold;
@@ -139,9 +139,16 @@ input:focus {
     box-shadow: 0 0 3px rgba(94, 158, 214, 0.6);
 }
 
-#password,
+#password:invalid,
 #confirmPassword:invalid {
     border-color: #ff0000;
+    outline: none;
+    box-shadow: 0 0 3px rgba(94, 158, 214, 0.6);
+}
+
+#password:valid,
+#confirmPassword:valid {
+    border-color: #00ff00;
     outline: none;
     box-shadow: 0 0 3px rgba(94, 158, 214, 0.6);
 }
